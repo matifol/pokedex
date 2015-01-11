@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="pokedex">
+  <head>
+    <title>Geta PokèAPI - AngularJS</title>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="app/vendor/bootstrap/css/bootstrap.css"></rel>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/home">Home</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container" ng-view></div>
+
+
+
+
+
+    <!-- All vendor JS -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="app/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <!-- JS -->
+    <script src="app/app.js"></script>
+    <script src="app/components/home/home.js"></script>
+    <script src="app/components/home/home-service.js"></script>
+    <script src="app/components/pokemon/pokemon.js"></script>
+    <script src="app/components/type/type.js"></script>
+    <script src="app/components/move/move.js"></script>
+  </body>
+</html>

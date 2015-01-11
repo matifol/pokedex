@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{pokemon.name}} - <small>{{pokemon.species}}</small></h1>
+  </div>
+
+  <div class="col-xs-8">
+    <div class="row">
+      <div class="col-xs-4" ng-repeat="sprite in sprites">
+        <img src="{{apiUri + sprite}}" alt="pokemon-sprite">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>{{description.description}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><strong>Info:</strong></p>
+      </div>
+      <div class="col-xs-12">
+        <ul class="list-unstyled">
+          <li>
+            <strong>HP:</strong>
+            {{pokemon.hp}}
+          </li>
+          <li>
+            <strong>Attack:</strong>
+            {{pokemon.attack}}
+          </li>
+          <li>
+            <strong>Defence:</strong>
+            {{pokemon.defence}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Moves:</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <form class="form-inline">
+          <label for="filterMoves">Filter:</label>
+          <input type="text" id="filterMoves" class="form-control" ng-model="filterMoves">
+          <button class="btn btn-primary" click="filterMoves = ''">Reset</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-3" ng-repeat="move in pokemon.moves | filter:filterMoves">
+        <a href="#/move?resource={{move.resource_uri}}">{{move.name}}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right sidebar -->
+  <div class="col-xs-4">
+    <div class="row" ng-show="pokemon.evolutions.length > 0">
+      <div class="col-xs-12">
+        <strong>Evolutions</strong>
+        <ul class="list-unstyled">
+          <li ng-repeat="evolution in pokemon.evolutions">
+            <a href="#/pokemon?resource={{evolution.resource_uri}}">{{evolution.to}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>Types:</strong>
+        <ul class="list-unstyled">
+          <li ng-repeat="type in pokemon.types">
+            <a href="#/type?resource={{type.resource_uri}}">{{type.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

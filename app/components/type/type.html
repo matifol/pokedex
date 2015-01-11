@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{type.name}}</h1>
+  </div>
+</div>
+<div class="row" ng-show="type.super_effective.length > 0">
+  <div class="col-xs-12">
+    <strong>Super effective:</strong>
+    <ul class="list-unstyled">
+      <li ng-repeat="super_effective in type.super_effective">
+        <a href="#/type?resource={{super_effective.resource_uri}}">{{super_effective.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-show="type.weakness.length > 0">
+  <div class="col-xs-12">
+    <strong>Weakness:</strong>
+    <ul class="list-unstyled">
+      <li ng-repeat="weakness in type.weakness">
+        <a href="#/type?resource={{weakness.resource_uri}}">{{weakness.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-show="type.ineffective.length > 0">
+  <div class="col-xs-12">
+    <strong>Ineffective:</strong>
+    <ul class="list-unstyled">
+      <li ng-repeat="ineffective in type.ineffective">
+        <a href="#/type?resource={{ineffective.resource_uri}}">{{ineffective.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-show="type.resistance.length > 0">
+  <div class="col-xs-12">
+    <strong>Resistance:</strong>
+    <ul class="list-unstyled">
+      <li ng-repeat="resistance in type.resistance">
+        <a href="#/type?resource={{resistance.resource_uri}}">{{resistance.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row" ng-show="type.no_effect.length > 0">
+  <div class="col-xs-12">
+    <strong>No effect:</strong>
+    <ul class="list-unstyled">
+      <li ng-repeat="no_effect in type.no_effect">
+        <a href="#/type?resource={{no_effect.resource_uri}}">{{no_effect.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

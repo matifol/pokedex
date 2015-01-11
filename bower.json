@@ -1,0 +1,29 @@
+{
+  "name": "PokeAPI",
+  "description": "PokèAPI - AngularJS",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "foundation"
+  ],
+  "authors": [
+    "Martin Folkeseth"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0",
+    "jquery": "~2.1.3"
+  }
+}

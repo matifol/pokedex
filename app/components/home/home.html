@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form class="form-inline">
+      <label for="filterText">Filter:</label>
+      <input type="text" id="filterText" class="form-control" ng-model="filterText">
+      <button class="btn btn-primary" ng-click="filterText = ''">Reset</button>
+    </form>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-2" ng-repeat="pokemon in pokemon | filter:filterText">
+    <a href="#/pokemon?resource={{pokemon.resource_uri}}">{{pokemon.name}}</a>
+  </div>
+</div>
