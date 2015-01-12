@@ -6,7 +6,6 @@ angular.module('pokedex.type',
 
   var typeRequest = searchService.getResource($routeParams.resource);
   typeRequest.success(function(type){
-    console.log(type);
     $scope.type = type;
   });
 

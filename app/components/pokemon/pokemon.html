@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <h1>{{pokemon.name}} - <small>{{pokemon.species}}</small></h1>
+    <h1>{{pokemon.name}} <small ng-show="pokemon.species.length > 0"> - {{pokemon.species}}</small></h1>
   </div>
 
   <div class="col-xs-8">
@@ -29,8 +29,12 @@
             {{pokemon.attack}}
           </li>
           <li>
-            <strong>Defence:</strong>
-            {{pokemon.defence}}
+            <strong>Defense:</strong>
+            {{pokemon.defense}}
+          </li>
+          <li>
+            <strong>Speed:</strong>
+            {{pokemon.speed}}
           </li>
         </ul>
       </div>

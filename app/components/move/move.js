@@ -6,7 +6,6 @@ angular.module('pokedex.move',
 
   var moveRequest = searchService.getResource($routeParams.resource);
   moveRequest.success(function(move){
-    console.log(move);
     $scope.move = move;
   });
 

@@ -6,7 +6,6 @@ angular.module('pokedex.pokemon',
 
   var pokemonRequest = searchService.getResource($routeParams.resource);
   pokemonRequest.success(function(pokemon){
-    console.log(pokemon);
     $scope.pokemon = pokemon;
     $scope.sprites = [];
     $scope.types = [];
